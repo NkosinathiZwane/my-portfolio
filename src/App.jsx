@@ -89,7 +89,7 @@ const projects = [
       {/* Projects Section */}
 <section id="projects" className="section">
   <h2><span className="section-badge badge-blue">Projects</span></h2>
-
+    <p>Click any project for more about it</p>
   <div className="projects-grid">
     {projects.map((project, index) => (
       <div
