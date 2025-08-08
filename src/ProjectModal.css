@@ -1,0 +1,201 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-overlay.dark {
+  background: rgba(0,0,0,0.9);
+}
+
+/* Modal Content */
+.modal-content {
+  background: var(--bg-primary);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  color: var(--accent);
+}
+
+/* Modal Header */
+.modal-header {
+  margin-bottom: 30px;
+}
+
+.modal-header h2 {
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Tech Stack in Modal */
+.modal-header .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  background: var(--accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Modal Image */
+.modal-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  object-fit: cover;
+  max-height: 300px;
+}
+
+/* Modal Description */
+.modal-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Modal Links */
+.modal-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.modal-links .btn-primary,
+.modal-links .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+}
+
+.modal-links .btn-primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.modal-links .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.modal-links .btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.modal-links .btn-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-description {
+    font-size: 1rem;
+  }
+
+  .modal-links {
+    flex-direction: column;
+  }
+
+  .modal-links .btn-primary,
+  .modal-links .btn-secondary {
+    justify-content: center;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 25px 15px;
+    margin: 10px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .modal-links .btn-primary,
+  .modal-links .btn-secondary {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
