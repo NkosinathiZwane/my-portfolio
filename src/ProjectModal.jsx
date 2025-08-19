@@ -40,7 +40,7 @@ const ProjectModal = ({ project, onClose, darkMode = false }) => {
               rel="noopener noreferrer" 
               className="btn-primary"
             >
-              <FaExternalLinkAlt /> Live Demo
+              <FaExternalLinkAlt /> Live Link
             </a>
           )}
           {project.githubLink && (
